@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddAndEdit.AddTaskFragment">
+
+    <TextView
+        android:id="@+id/edit_taskTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_new_task"
+app:layout_constraintBottom_toTopOf="@id/taskDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="@dimen/_3sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/_15ssp"
+
+
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/taskDetails"
+        app:errorEnabled="true"
+        app:errorIconDrawable="@drawable/ic_error"
+        android:layout_width="match_parent"
+        style="@style/DayTextColor"
+
+        app:layout_constraintBottom_toTopOf="@id/descriptionTextInputLayout"
+app:layout_constraintTop_toBottomOf="@id/edit_taskTV"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/enter_task_title"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/descriptionTextInputLayout"
+        android:layout_width="match_parent"
+        style="@style/DayTextColor"
+
+        app:errorEnabled="true"
+        app:errorIconDrawable="@drawable/ic_error"
+app:layout_constraintTop_toBottomOf="@id/taskDetails"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:hint="@string/enter_task_desc"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/selectedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginTop="24dp"
+        android:textSize="@dimen/_15ssp"
+        android:text="@string/select_task_date"
+        app:drawableEndCompat="@drawable/glasshoure"
+
+        app:layout_constraintBottom_toTopOf="@id/DateTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTextInputLayout" />
+
+    <TextView
+        android:id="@+id/DateTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@id/addTask_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectedDate"
+        tools:text="@string/select_task_date" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addTask_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="68dp"
+        android:text="@string/add_task"
+        android:textSize="@dimen/_20ssp"
+        android:backgroundTint="@color/blue"
+android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DateTV" />
+</androidx.constraintlayout.widget.ConstraintLayout>

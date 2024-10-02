@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/DayBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+
+    android:layout_marginVertical="8dp"
+    android:padding="8dp">
+
+    <com.zerobranch.layout.SwipeLayout
+        android:id="@+id/swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:draggedItem="@id/drag_item"
+        app:leftItem="@id/left_item"
+        app:isTogether="true"
+
+        app:swipeDirection="right">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/left_item"
+            style="@style/DayBackground"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="8dp"
+            android:padding="8dp"
+            app:cardCornerRadius="@dimen/_10sdp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ff00"
+                android:contentDescription="@string/delete_item"
+                android:src="@drawable/baseline_delete_24" />
+        </com.google.android.material.card.MaterialCardView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/drag_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp">
+
+            <View
+                android:id="@+id/divider_status"
+                android:layout_width="4dp"
+                android:layout_height="72dp"
+                android:layout_margin="8dp"
+                android:background="@color/blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/task_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/divider_status"
+                app:layout_constraintTop_toTopOf="@id/divider_status"
+                tools:text="Play Basketball" />
+
+            <TextView
+                android:id="@+id/task_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:padding="8dp"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_clock"
+                app:layout_constraintBottom_toBottomOf="@id/divider_status"
+                app:layout_constraintStart_toEndOf="@id/divider_status"
+                app:layout_constraintTop_toBottomOf="@id/task_title"
+                tools:text="10:30PM" />
+
+            <ImageView
+                android:id="@+id/isDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/check_bg"
+                android:contentDescription="@string/todo"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="12dp"
+                android:src="@drawable/ic_done"
+                app:layout_constraintBottom_toBottomOf="@id/divider_status"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/divider_status" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.zerobranch.layout.SwipeLayout>
+
+
+
+
+
+
+
+
+</com.google.android.material.card.MaterialCardView>

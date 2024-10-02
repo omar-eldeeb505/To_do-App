@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">إنجز </string>
+    <string name="list">قائمة</string>
+    <string name="settings">الاعدادات</string>
+    <string name="todo_list">قائمة المهام</string>
+    <string name="add_new_task">اضافة مهمة جديدة </string>
+    <string name="enter_task_title">ادخل اسم المهمة </string>
+    <string name="enter_task_desc">ادخل و صف المهمة </string>
+    <string name="add_task">اضافة</string>
+    <string name="select_task_date">تحديد الوقت </string>
+    <string name="required">مطلوب</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="edit_task">تعديل المهمة</string>
+    <string name="taskTitle"> اسم المهمة</string>
+    <string name="taskDetails">تفاصيل المهمة </string>
+    <string name="save_changes">حفظ التغيرات</string>
+    <string name="language">اللغة</string>
+    <string name="mode">الوضع</string>
+
+
+</resources>
